@@ -3,129 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Assignment 3</title>
+    <title>My Favorite Holiday: Kyoto, Japan</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+            background-color: #f9f9f9;
         }
         h1 {
+            color: #2c3e50;
             text-align: center;
+            margin-bottom: 0; /* Remove default bottom margin to control spacing with <br> */
+            font-size: 2.5em;
         }
-        table {
-            border: 1px solid black;
-            border-spacing: 1px;
-            margin: 20px auto;
+        p {
+            margin-top: 10px; /* Add a small top margin to the paragraph for spacing after <br> */
+            font-size: 1.1em;
+            text-align: justify;
         }
-        td {
-            padding: 1px;
-            border: 1px solid black;
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
         }
-        .middle {
-            margin-left: auto;
-            margin-right: auto;
+        ol, ul {
+            margin-bottom: 20px;
         }
-        .center {
-            text-align: center;
+        li {
+            margin-bottom: 10px;
+            font-size: 1em;
         }
-        .right {
-            text-align: right;
+        /* Styling for <b> and <i> tags to provide visual emphasis */
+        b {
+            color: #c0392b; /* A distinct color for bold emphasis */
+            font-weight: bold; /* Ensure it's visually bold */
         }
-        .green {
-            background-color: green;
-        }
-        .blue {
-            background-color: blue;
+        i {
+            color: #27ae60; /* A distinct color for italic emphasis */
+            font-style: italic; /* Ensure it's visually italic */
         }
     </style>
 </head>
 <body>
-    <h1>HTML Assignment #3</h1>
 
-    <!-- Table 1 -->
-    <table class="middle" id="table-1">
-        <tr>
-            <td id="t11">Cell 1</td>
-            <td id="t12">Cell 2</td>
-            <td id="t13" class="right">Cell 3</td>
-        </tr>
-        <tr>
-            <td>Cell 4</td>
-            <td class="center">Cell 5</td>
-            <td class="right">Cell 6</td>
-        </tr>
-        <tr>
-            <td>Cell 7</td>
-            <td>Cell 8</td>
-            <td class="right">Cell 9</td>
-        </tr>
-    </table>
+    <!-- Heading with the name of the holiday destination -->
+    <h1>Kyoto, Japan</h1>
 
-    <!-- Table 2 -->
-    <table class="middle" id="table-2">
-        <tr>
-            <td id="t21" colspan="6">Single Cell Spanning 6 Columns</td>
-        </tr>
-        <tr>
-            <td>Row 2, Cell 1</td>
-            <td>Row 2, Cell 2</td>
-            <td>Row 2, Cell 3</td>
-            <td>Row 2, Cell 4</td>
-            <td>Row 2, Cell 5</td>
-            <td>Row 2, Cell 6</td>
-        </tr>
-        <tr>
-            <td>Row 3, Cell 1</td>
-            <td>Row 3, Cell 2</td>
-            <td>Row 3, Cell 3</td>
-            <td>Row 3, Cell 4</td>
-            <td>Row 3, Cell 5</td>
-            <td>Row 3, Cell 6</td>
-        </tr>
-        <tr>
-            <td>Row 4, Cell 1</td>
-            <td>Row 4, Cell 2</td>
-            <td>Row 4, Cell 3</td>
-            <td>Row 4, Cell 4</td>
-            <td>Row 4, Cell 5</td>
-            <td>Row 4, Cell 6</td>
-        </tr>
-        <tr>
-            <td>Row 5, Cell 1</td>
-            <td>Row 5, Cell 2</td>
-            <td>Row 5, Cell 3</td>
-            <td>Row 5, Cell 4</td>
-            <td>Row 5, Cell 5</td>
-            <td>Row 5, Cell 6</td>
-        </tr>
-        <tr>
-            <td>Row 6, Cell 1</td>
-            <td>Row 6, Cell 2</td>
-            <td>Row 6, Cell 3</td>
-            <td>Row 6, Cell 4</td>
-            <td>Row 6, Cell 5</td>
-            <td>Row 6, Cell 6</td>
-        </tr>
-    </table>
+    <!-- Line break between the heading and the paragraph -->
+    <br>
 
-    <!-- Table 3 -->
-    <table class="middle" id="table-3">
-        <tr class="green">
-            <td>Green Row</td>
-            <td>Green Row</td>
-            <td>Green Row</td>
-        </tr>
-        <tr>
-            <td>Normal Cell</td>
-            <td id="t-image">
-                <img src="https://picsum.photos/200/100" alt="Sample Image">
-            </td>
-            <td>Normal Cell</td>
-        </tr>
-        <tr class="blue">
-            <td>Blue Row</td>
-            <td>Blue Row</td>
-            <td>Blue Row</td>
-        </tr>
-    </table>
+    <!-- Paragraph providing a brief overview of the destination -->
+    <p>
+        Kyoto, the ancient capital of Japan, is a city steeped in history, culture, and natural beauty. Renowned for its classical Buddhist temples, traditional wooden houses, beautiful gardens, and geisha districts, Kyoto offers a tranquil yet vibrant experience unlike any other. It's a place where old-world charm meets modern elegance, providing a truly immersive journey into Japanese heritage.
+    </p>
+
+    <h2>Top 5 Attractions</h2>
+    <!-- Ordered list for top 5 attractions -->
+    <ol>
+        <li>
+            <b>Kinkaku-ji</b> (Golden Pavilion): A <i>stunning</i> Zen Buddhist temple covered in gold leaf, set against a picturesque pond.
+        </li>
+        <li>
+            <b>Fushimi Inari-taisha</b>: Famous for its thousands of <i>vibrant</i> vermilion torii gates that wind through the hills behind the shrine.
+        </li>
+        <li>
+            <b>Arashiyama Bamboo Grove</b>: A <i>peaceful</i> and iconic natural landmark offering a serene walk through towering bamboo stalks.
+        </li>
+        <li>
+            <b>Gion District</b>: Explore Kyoto's most famous geisha district, where you can still spot geiko (geisha) and maiko (apprentice geisha) in their <i>traditional</i> attire.
+        </li>
+        <li>
+            <b>Kiyomizu-dera Temple</b>: A beautiful temple known for its large wooden stage that offers <i>panoramic</i> views of the city.
+        </li>
+    </ol>
+
+    <h2>Must-Try Foods</h2>
+    <!-- Unordered list for must-try foods -->
+    <ul>
+        <li>
+            <b>Kyoto-style Kaiseki</b>: An <i>exquisite</i> multi-course traditional dinner, focusing on seasonal ingredients and beautiful presentation.
+        </li>
+        <li>
+            <i>Matcha Desserts</i>: Indulge in a variety of <b>delicious</b> green tea flavored sweets, from parfaits to cakes.
+        </li>
+        <li>
+            <b>Yuba</b> (Tofu Skin): A <i>delicate</i> and unique local specialty, often served fresh or deep-fried.
+        </li>
+        <li>
+            <i>Obanzai</i>: Traditional <b>home-style</b> Kyoto cuisine, featuring small dishes made with local vegetables and seasonal ingredients.
+        </li>
+        <li>
+            <b>Sake</b>: Taste the <i>finest</i> local brews from one's Japan's most celebrated sake-producing regions.
+        </li>
+    </ul>
+
 </body>
 </html>
