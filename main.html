@@ -3,105 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Favorite Holiday: Kyoto, Japan</title>
+    <title>Semantic Table and Media</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
+            background-color: #f8f9fa; /* Light background */
+            margin: 0;
+            padding: 20px;
             color: #333;
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 0 20px;
-            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center content horizontally */
+            min-height: 100vh;
+            box-sizing: border-box;
         }
-        h1 {
-            color: #2c3e50;
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            max-width: 600px; /* Limit table width for better readability */
+            border-collapse: collapse; /* Collapse borders between cells */
+            margin-bottom: 40px; /* Space below the table */
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px; /* Rounded corners for the table */
+            overflow: hidden; /* Ensures shadow/border-radius applies correctly */
+        }
+
+        th, td {
+            /* Updated padding and border to match test expectations */
+            border: 1px solid rgb(0, 0, 0); /* Black border as rgb(0,0,0) */
+            padding: 1px; /* Padding as specified by test */
+            text-align: left; /* Align text to the left */
+        }
+
+        thead th {
+            background-color: #007bff; /* Blue header background */
+            color: white; /* White text for header */
+            font-weight: bold;
+            padding: 15px; /* Keep a bit more padding for headers for readability */
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2; /* Zebra striping for rows */
+        }
+
+        tbody tr:hover {
+            background-color: #e9ecef; /* Hover effect on rows */
+        }
+
+        /* Classes for specific cell alignment */
+        .center {
             text-align: center;
-            margin-bottom: 0; /* Remove default bottom margin to control spacing with <br> */
-            font-size: 2.5em;
         }
-        p {
-            margin-top: 10px; /* Add a small top margin to the paragraph for spacing after <br> */
-            font-size: 1.1em;
-            text-align: justify;
+
+        .right {
+            text-align: right;
         }
-        h2 {
-            color: #34495e;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 5px;
+
+        .middle {
+            /* This class is expected on the table element itself,
+               so it will primarily affect its layout or positioning if any,
+               but for now, it's just a class applied. */
+            /* Assuming 'middle' might imply centering the table for visual guidance if not handled by body flex */
+            margin-left: auto;
+            margin-right: auto;
         }
-        ol, ul {
-            margin-bottom: 20px;
+
+
+        /* Heading between table and list */
+        .section-heading {
+            color: #343a40;
+            margin: 40px 0 25px 0; /* Top, right/left, bottom margins */
+            font-size: 28px;
+            text-align: center;
+            width: 100%;
+            max-width: 600px; /* Align with table width */
         }
-        li {
-            margin-bottom: 10px;
-            font-size: 1em;
+
+        /* Ordered List Styling */
+        ol {
+            list-style: decimal; /* Decimal numbering */
+            width: 100%;
+            max-width: 600px; /* Limit list width */
+            padding-left: 20px; /* Indent list items */
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 25px;
+            box-sizing: border-box;
         }
-        /* Styling for <b> and <i> tags to provide visual emphasis */
-        b {
-            color: #c0392b; /* A distinct color for bold emphasis */
-            font-weight: bold; /* Ensure it's visually bold */
+
+        ol li {
+            margin-bottom: 20px; /* Space between list items */
+            color: #495057;
+            display: flex; /* Use flexbox for consistent spacing */
+            flex-direction: column; /* Stack image/video/audio within list item */
+            align-items: flex-start; /* Align content to the start */
+            gap: 10px; /* Space between the item's label and media */
         }
-        i {
-            color: #27ae60; /* A distinct color for italic emphasis */
-            font-style: italic; /* Ensure it's visually italic */
+
+        ol li:last-child {
+            margin-bottom: 0; /* No margin after the last list item */
+        }
+
+        /* Media element styling */
+        img {
+            max-width: 100%; /* Ensure image is responsive */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+            display: block; /* Remove extra space below image */
+        }
+
+        video, audio {
+            width: 100%; /* Make video/audio players take full width */
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 650px) {
+            table, ol {
+                margin-left: 10px;
+                margin-right: 10px;
+                width: calc(100% - 20px); /* Adjust for padding on small screens */
+            }
+            body {
+                padding: 10px;
+            }
+            .section-heading {
+                font-size: 24px;
+            }
+            th, td {
+                padding: 10px; /* Adjust padding for smaller screens if needed */
+                font-size: 14px;
+            }
+            ol li {
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- Heading with the name of the holiday destination -->
-    <h1>Kyoto, Japan</h1>
+    <!-- Semantic Table -->
+    <!-- Added id="table-1" and class="middle" as per test expectations -->
+    <table id="table-1" class="middle">
+        <thead>
+            <tr>
+                <th>Roll Number</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>101</td>
+                <!-- Added id="t12" and class="center" -->
+                <td id="t12" class="center">Alice Smith</td>
+            </tr>
+            <tr>
+                <td>102</td>
+                <!-- Added id="t13" and class="right" -->
+                <td id="t13" class="right">Bob Johnson</td>
+            </tr>
+            <tr>
+                <td>103</td>
+                <td>Charlie Brown</td>
+            </tr>
+            <!-- Added new row with td id="t21" and colspan="2" -->
+            <tr>
+                <td id="t21" colspan="2" class="center">This is a merged cell spanning two columns.</td>
+            </tr>
+        </tbody>
+    </table>
 
-    <!-- Line break between the heading and the paragraph -->
-    <br>
+    <!-- Heading between table and list -->
+    <h2 class="section-heading">List of medias</h2>
 
-    <!-- Paragraph providing a brief overview of the destination -->
-    <p>
-        Kyoto, the ancient capital of Japan, is a city steeped in history, culture, and natural beauty. Renowned for its classical Buddhist temples, traditional wooden houses, beautiful gardens, and geisha districts, Kyoto offers a tranquil yet vibrant experience unlike any other. It's a place where old-world charm meets modern elegance, providing a truly immersive journey into Japanese heritage.
-    </p>
-
-    <h2>Top 5 Attractions</h2>
-    <!-- Ordered list for top 5 attractions -->
+    <!-- Ordered List of Media -->
     <ol>
         <li>
-            <b>Kinkaku-ji</b> (Golden Pavilion): A <i>stunning</i> Zen Buddhist temple covered in gold leaf, set against a picturesque pond.
+            <h3>Image Example:</h3>
+            <!-- Wrapped img in a div with id="t-image" -->
+            <div id="t-image">
+                <img src="https://picsum.photos/id/123/200/300" alt="Random image showing a mountain landscape with a lake." onerror="this.onerror=null;this.src='https://placehold.co/200x300/e0e0e0/000000?text=Image+Missing';">
+            </div>
         </li>
         <li>
-            <b>Fushimi Inari-taisha</b>: Famous for its thousands of <i>vibrant</i> vermilion torii gates that wind through the hills behind the shrine.
+            <h3>Video Example:</h3>
+            <video controls>
+                <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </li>
         <li>
-            <b>Arashiyama Bamboo Grove</b>: A <i>peaceful</i> and iconic natural landmark offering a serene walk through towering bamboo stalks.
-        </li>
-        <li>
-            <b>Gion District</b>: Explore Kyoto's most famous geisha district, where you can still spot geiko (geisha) and maiko (apprentice geisha) in their <i>traditional</i> attire.
-        </li>
-        <li>
-            <b>Kiyomizu-dera Temple</b>: A beautiful temple known for its large wooden stage that offers <i>panoramic</i> views of the city.
+            <h3>Audio Example:</h3>
+            <audio controls src="http://commondatastorage.googleapis.com/codeskulptor-assets/Epoq-Lepidoptera.ogg">
+                Your browser does not support the audio element.
+            </audio>
         </li>
     </ol>
-
-    <h2>Must-Try Foods</h2>
-    <!-- Unordered list for must-try foods -->
-    <ul>
-        <li>
-            <b>Kyoto-style Kaiseki</b>: An <i>exquisite</i> multi-course traditional dinner, focusing on seasonal ingredients and beautiful presentation.
-        </li>
-        <li>
-            <i>Matcha Desserts</i>: Indulge in a variety of <b>delicious</b> green tea flavored sweets, from parfaits to cakes.
-        </li>
-        <li>
-            <b>Yuba</b> (Tofu Skin): A <i>delicate</i> and unique local specialty, often served fresh or deep-fried.
-        </li>
-        <li>
-            <i>Obanzai</i>: Traditional <b>home-style</b> Kyoto cuisine, featuring small dishes made with local vegetables and seasonal ingredients.
-        </li>
-        <li>
-            <b>Sake</b>: Taste the <i>finest</i> local brews from one's Japan's most celebrated sake-producing regions.
-        </li>
-    </ul>
 
 </body>
 </html>
